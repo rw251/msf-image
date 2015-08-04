@@ -67,7 +67,7 @@
   }
 }
 
-@media all and (max-height: 600px) and (min-width: 401px) {
+@media all and (max-height: 600px) and (min-height: 401px) {
   #img {
     height: 400px;
   }
