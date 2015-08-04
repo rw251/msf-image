@@ -13,7 +13,7 @@
     "postcommit": "git push origin",
     "predeploy": "npm run remove-live-reload && npm run commit",
     "deploy": "git push origin master:gh-pages && git checkout gh-pages && git pull",
-    "postdeploy": "git checkout master && npm run add-live-reload && npm run commit"
+    "postdeploy": "git checkout master && npm run commit"
   },
   "repository": {
     "type": "git",
