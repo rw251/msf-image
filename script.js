@@ -24,7 +24,7 @@
     }
   };
 
-  var initialize = function(){
+  var cover = function(){
     // Populate mask
     var w = $('#img').width() / local.block;
     var h = $('#img').height() / local.block;
@@ -41,9 +41,22 @@
         m.css('top', top + y * local.block);
       }
     }
+  };
+
+  var recover = function(){
+    $('#img .unmask').each(function(){
+      $(this).show().removeClass('unmask').addClass('mask');
+    });
+  };
+
+  var initialize = function(){
+    cover();
 
     $('body').on('keyup', function(e){
       if(e.which===32 )reveal(0.15);
+      else if (e.which === 13) {
+        recover();
+      }
     });
   };
 
