@@ -1,0 +1,8 @@
+deploy.bat
+deploy.sh
+node_modules
+.DS_Store
+*.log
+.idea/
+index.html.bak
+mod.html

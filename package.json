@@ -1,0 +1,31 @@
+{
+  "name": "msf-image",
+  "version": "0.0.1",
+  "description": "Image revealer",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "serve": "http-server -o -p 9090 .",
+    "start": "npm run demo",
+    "demo": "npm run serve -s",
+    "precommit": "git add --all",
+    "commit": "git diff-index --quiet HEAD || git commit -m \"Changes\"",
+    "postcommit": "git push origin",
+    "predeploy": "npm run remove-live-reload && npm run commit",
+    "deploy": "git push origin master:gh-pages && git checkout gh-pages && git pull",
+    "postdeploy": "git checkout master && npm run add-live-reload && npm run commit"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rw251/msf-image.git"
+  },
+  "author": "Richard Williams",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rw251/msf-image/issues"
+  },
+  "homepage": "https://github.com/rw251/msf-image",
+  "devDependencies": {
+    "http-server": "^0.8.0"
+  }
+}
