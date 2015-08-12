@@ -52,6 +52,9 @@
   var initialize = function(){
     cover();
 
+    //load image
+    $('img').attr('src','http://cdn.morguefile.com/imageData/public/files/l/lensfusion/preview/fldr_2004_10_07/file0001758746657.jpg');
+
     $('body').on('keyup', function(e){
       if(e.which===32 )reveal(0.15);
       else if (e.which === 13) {
